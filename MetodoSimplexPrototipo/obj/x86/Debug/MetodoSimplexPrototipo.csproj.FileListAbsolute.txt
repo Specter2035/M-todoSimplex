@@ -24,3 +24,11 @@ C:\Users\Usuario\Desktop\ProyectoSimplex\MetodoSimplexPrototipo\MetodoSimplexPro
 C:\Users\Usuario\Desktop\ProyectoSimplex\MetodoSimplexPrototipo\MetodoSimplexPrototipo\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
 C:\Users\Usuario\Desktop\ProyectoSimplex\MetodoSimplexPrototipo\MetodoSimplexPrototipo\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
 C:\Users\Usuario\Desktop\ProyectoSimplex\MetodoSimplexPrototipo\MetodoSimplexPrototipo\obj\x86\Debug\MetodoSimplexPrototipo.csproj.GenerateResource.Cache
+C:\Users\Usuario\Desktop\TEC\3er Semestre\Investigacion de Operaciones\Unidad 3\Proyecto Método Simplex\GitHub\MetodoSimplex-main\MetodoSimplexPrototipo\bin\Debug\MetodoSimplexPrototipo.exe.config
+C:\Users\Usuario\Desktop\TEC\3er Semestre\Investigacion de Operaciones\Unidad 3\Proyecto Método Simplex\GitHub\MetodoSimplex-main\MetodoSimplexPrototipo\obj\x86\Debug\MetodoSimplexPrototipo.exe
+C:\Users\Usuario\Desktop\TEC\3er Semestre\Investigacion de Operaciones\Unidad 3\Proyecto Método Simplex\GitHub\MetodoSimplex-main\MetodoSimplexPrototipo\obj\x86\Debug\MetodoSimplexPrototipo.pdb
+C:\Users\Usuario\Desktop\TEC\3er Semestre\Investigacion de Operaciones\Unidad 3\Proyecto Método Simplex\GitHub\MetodoSimplex-main\MetodoSimplexPrototipo\bin\Debug\MetodoSimplexPrototipo.exe
+C:\Users\Usuario\Desktop\TEC\3er Semestre\Investigacion de Operaciones\Unidad 3\Proyecto Método Simplex\GitHub\MetodoSimplex-main\MetodoSimplexPrototipo\bin\Debug\MetodoSimplexPrototipo.pdb
+C:\Users\Usuario\Desktop\TEC\3er Semestre\Investigacion de Operaciones\Unidad 3\Proyecto Método Simplex\GitHub\MetodoSimplex-main\MetodoSimplexPrototipo\obj\x86\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\Usuario\Desktop\TEC\3er Semestre\Investigacion de Operaciones\Unidad 3\Proyecto Método Simplex\GitHub\MetodoSimplex-main\MetodoSimplexPrototipo\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\Usuario\Desktop\TEC\3er Semestre\Investigacion de Operaciones\Unidad 3\Proyecto Método Simplex\GitHub\MetodoSimplex-main\MetodoSimplexPrototipo\obj\x86\Debug\MetodoSimplexPrototipo.csproj.GenerateResource.Cache

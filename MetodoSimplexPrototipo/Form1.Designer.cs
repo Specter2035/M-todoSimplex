@@ -57,6 +57,8 @@
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.label13 = new System.Windows.Forms.Label();
+            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.listBox3 = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
@@ -318,12 +320,34 @@
             this.label13.TabIndex = 29;
             this.label13.Text = "Nuevo Renglón Z";
             // 
+            // listBox2
+            // 
+            this.listBox2.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.ItemHeight = 18;
+            this.listBox2.Location = new System.Drawing.Point(462, 538);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(415, 94);
+            this.listBox2.TabIndex = 30;
+            // 
+            // listBox3
+            // 
+            this.listBox3.Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBox3.FormattingEnabled = true;
+            this.listBox3.ItemHeight = 18;
+            this.listBox3.Location = new System.Drawing.Point(29, 638);
+            this.listBox3.Name = "listBox3";
+            this.listBox3.Size = new System.Drawing.Size(415, 94);
+            this.listBox3.TabIndex = 31;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Thistle;
             this.ClientSize = new System.Drawing.Size(1139, 735);
+            this.Controls.Add(this.listBox3);
+            this.Controls.Add(this.listBox2);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.dataGridView2);
@@ -393,6 +417,8 @@
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.ListBox listBox3;
     }
 }
 

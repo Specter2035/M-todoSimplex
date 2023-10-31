@@ -20,6 +20,9 @@ namespace WindowsFormsApplication1
         static double[,] tablasimplex2;
         static int pos1 = 0;
         static Queue<string> ColaC1 = new Queue<string>();
+        static Queue<string> ColaC2 = new Queue<string>();
+        static Queue<string> ColaC4 = new Queue<string>();
+
         private void btnCalcular_Click(object sender, EventArgs e)
         {
             //Generar matriz
@@ -114,9 +117,36 @@ namespace WindowsFormsApplication1
             //Segundo paso, encontrar renglon pivote
             double min1 = 99999;
             //int pos1 = 0;
-            double renglon1 = tablasimplex[1,6] / tablasimplex[1,1];
-            double renglon2 = tablasimplex[2,6] / tablasimplex[2,1];
-            double renglon3 = tablasimplex[3,6] / tablasimplex[3,1];
+            //Verificar que los valores no sean divididos sobre cero
+            double renglon1, renglon2, renglon3;
+renglon1 = tablasimplex[1, 6] / tablasimplex[1, 1];
+renglon2 = tablasimplex[2, 6] / tablasimplex[2, 1];
+            renglon3 = tablasimplex[3, 6] / tablasimplex[3, 1];
+            /*if (tablasimplex[1, 6] > 0)
+            {
+                
+            }
+            else
+            {
+                renglon1 = -1;
+            }
+            if (tablasimplex[2, 6] > 0)
+            {
+                
+            }
+            else
+            {
+                renglon2 = -1;
+            }
+            if (tablasimplex[3, 6] > 0)
+            {
+                
+            }
+            else
+            {
+                renglon3 = -1;
+            }*/
+
 
             double[] renglones = new double[3];
             renglones[0] = renglon1;
@@ -127,8 +157,12 @@ namespace WindowsFormsApplication1
             {
                 if (renglones[i] < min1)
                 {
-                    min1 = renglones[i];
-                    pos1 = i+1;
+                    //Verificar que los valores no sean negativos
+                    if (renglones[i] >= 0)
+                    {
+                        min1 = renglones[i];
+                        pos1 = i+1;
+                    }                    
                 }
             }
 
@@ -192,20 +226,57 @@ namespace WindowsFormsApplication1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            double E_Pivote1 = tablasimplex[0, pos] * -1;
+            //Constantes de cada renglon 
+            double E_Pivote1 = tablasimplex[0, pos] * -1;//Constante de s1
             double Const = tablasimplex[0, pos];
-            double E_Pivote2 = tablasimplex[1, pos] * -1;
+            double E_Pivote2 = tablasimplex[1, pos] * -1;//Constante de s2
+            double E_Pivote3 = tablasimplex[3, pos] * -1;//Constante de s2
+            
+
+            //Calcular renglon z
             for (int i = 0; i < 7; i++)
             {
                 tablasimplex2[0, i] = ((E_Pivote1) * (tablasimplex2[pos1, i])) + tablasimplex[0, i];
                 ColaC1.Enqueue("-(" + Const + ") * " + (tablasimplex2[pos1, i]) + "\n " +" + "+ tablasimplex[0, i] + "\n " + " = " +
                     ((E_Pivote1) * (tablasimplex2[pos1, i])) + " + (" + tablasimplex[0, i]+ ")  = "+ tablasimplex2[0,i]+ "\n \n");
                 listBox1.DataSource = null;
-                listBox1 .DataSource = ColaC1.ToArray();
-               
+                listBox1.DataSource = ColaC1.ToArray();              
             }
-           
-        }
-        
+
+            //Calcular renglon s1
+            for (int i = 0; i < 7; i++)
+            {
+                tablasimplex2[1, i] = ((E_Pivote2) * (tablasimplex2[pos1, i])) + tablasimplex[1, i];
+                ColaC2.Enqueue("-(" + Const + ") * " + (tablasimplex2[pos1, i]) + "\n " + " + " + tablasimplex[1, i] + "\n " + " = " +
+                    ((E_Pivote2) * (tablasimplex2[pos1, i])) + " + (" + tablasimplex[1, i] + ")  = " + tablasimplex2[1, i] + "\n \n");
+                listBox2.DataSource = null;
+                listBox2.DataSource = ColaC2.ToArray();
+            }
+
+            //Calcular renglon s3
+            for (int i = 0; i < 7; i++)
+            {
+                tablasimplex2[3, i] = ((E_Pivote3) * (tablasimplex2[pos1, i])) + tablasimplex[3, i];
+                ColaC4.Enqueue("-(" + Const + ") * " + (tablasimplex2[pos1, i]) + "\n " + " + " + tablasimplex[3, i] + "\n " + " = " +
+                    ((E_Pivote3) * (tablasimplex2[pos1, i])) + " + (" + tablasimplex[3, i] + ")  = " + tablasimplex2[3, i] + "\n \n");
+                listBox3.DataSource = null;
+                listBox3.DataSource = ColaC4.ToArray();
+            }            
+
+            //Actualizar dataGridView
+            dataGridView2.Rows.Clear();
+            for (int row = 0; row < tablasimplex.GetLength(0); row++)
+            {
+                DataGridViewRow dataGridViewRow2 = new DataGridViewRow();
+                dataGridViewRow2.CreateCells(dataGridView2);
+
+                for (int col = 0; col < tablasimplex2.GetLength(1); col++)
+                {
+                    dataGridViewRow2.Cells[col + 1].Value = tablasimplex2[row, col].ToString();
+                }
+
+                dataGridView2.Rows.Add(dataGridViewRow2);
+            }
+        }        
     }
 }
